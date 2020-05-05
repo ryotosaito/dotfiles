@@ -66,7 +66,6 @@ __prompt_command() {
 	elif [[ -n $VIRTUAL_ENV ]] ; then
 		PS1="(`basename \"$VIRTUAL_ENV\"`)$PS1"
 	fi
-	export PS1
 }
 
 ##############################################
