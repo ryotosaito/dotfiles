@@ -1,6 +1,15 @@
-source "$HOME/.rc"
+# .bashrc works only if the shell is interactive
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
+source "$HOME/.rc"
 set -o vi
+
+HISTSIZE=3000
+HISTFILESIZE=3000
+PROMPT_DIRTRIM=3
 
 ##############################################
 # Prompt
@@ -80,4 +89,11 @@ __prompt_command() {
 			socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\" &
 		fi
 	}
+}
+
+##############################################
+# iTerm2
+##############################################
+[[ -e "$HOME/.iterm2_shell_integration.bash" ]] && {
+	source "$HOME/.iterm2_shell_integration.bash"
 }
