@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This commit is the test of commiting changes automatically.
 
 REPODIR="$(cd $(dirname $0); pwd)"
 cd $REPODIR
