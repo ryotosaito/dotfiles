@@ -61,7 +61,7 @@ __prompt_command() {
 		[157]=SIGUSR1
 		[158]=SIGUSR2
 	)
-	PS1="\[$fgreen\]\u\[$reset\]@\[$fblue\]\w\[$reset\] "
+	PS1="\[$fgreen\]\u@\h\[$reset\]:\[$fblue\]\w\[$reset\] "
 	PS1+="$(command -v __git_ps1 >/dev/null && __git_ps1 "\[$fblack$bgreen\] git@%s \[$reset\]") "
 	PS1+="\[$uline\]\D{%Y/%m/%d %H:%M:%S}\[$reset\] "
 	PS1+="$(if [[ $status -eq 0 ]]; then printf 🎉; else printf "💥 \[$fred\]%d(%s)\[$reset\]" $status "${err_code[$status]}"; fi)\n"
