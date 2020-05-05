@@ -1,0 +1,19 @@
+alias ls='ls --color=auto'
+alias ll='ls -l'
+alias la='ls -al'
+
+case "$(uname -s)" in
+	'Darwin' )
+		alias pbp='pbpaste'
+		alias pbc='pbcopy'
+		alias o='open'
+		alias ip='ifconfig #'
+		;;
+	'Linux' )
+		alias pbp='xsel -b'
+		alias pbc='xsel -bi'
+		alias o='xdg-open'
+		;;
+esac
+
+eval "$(hub alias -s)"
