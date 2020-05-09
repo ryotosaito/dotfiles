@@ -12,6 +12,7 @@ PATH="$HOME/.cargo/bin:$PATH"
 [[ "$(uname -s)" == 'Darwin' ]] && {
 	# Commands installed via Homebrew
 	PATH="/usr/local/opt/ruby/bin:$PATH"
+	PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
 	# Use GNU commands as default
 	PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
