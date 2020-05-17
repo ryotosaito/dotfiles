@@ -1,24 +1,27 @@
-source "$HOME/.profile"
-source "$HOME/.bashrc"
-[[ -e "$HOME/.dotfiles_path" ]] && source "$HOME/.dotfiles_path"
+. "$HOME/.profile"
+. "$HOME/.bashrc"
+[[ -e "$HOME/.dotfiles_path" ]] && . "$HOME/.dotfiles_path"
 
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 
-##############################################
-# Bash completion for commands from homebrew
-##############################################
+##########################################################
+# Bash completion and other stuffs for homebrew formulae
+##########################################################
 [[ "$(uname -s)" == 'Darwin' ]] && command -v brew &>/dev/null && {
+	[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+	[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+
 	# brew install bash-completion
-	[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && source "/usr/local/etc/profile.d/bash_completion.sh"
+	[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 	# completions from other formulae
 	HOMEBREW_PREFIX="$(brew --prefix)"
 	if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
-		source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+		. "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
 	else
 		for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*; do
-			[[ -r "$COMPLETION" ]] && source "$COMPLETION"
+			[[ -r "$COMPLETION" ]] && . "$COMPLETION"
 		done
 	fi
 }
