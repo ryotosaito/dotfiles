@@ -38,6 +38,8 @@ shift $(($OPTIND - 1))
 [[ -v INIT_FLAG ]] && {
 	mkdir -p "$HOME/.vim/colors"
 	wget -P "$HOME/.vim/colors/" https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
+	mkdir -p "$HOME/.vim/bundle/"
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	vim +PluginInstall +qall
 }
 
