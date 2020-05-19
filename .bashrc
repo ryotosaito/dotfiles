@@ -14,7 +14,7 @@ PROMPT_DIRTRIM=3
 ##############################################
 # Prompt
 ##############################################
-export PROMPT_COMMAND=__prompt_command
+PROMPT_COMMAND=__prompt_command
 __prompt_command() {
 	local status=$?
 	local reset='\e[m' uline='\e[4m' bgreen='\e[42m'
