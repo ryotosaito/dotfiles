@@ -48,7 +48,7 @@ cd $REPODIR
 
 echo "DOTFILES=\"$REPODIR\"" > .dotfiles_path
 
-for file in .bash_logout .bash_profile .bashrc .dotfiles_path .inputrc .profile .rc .screenrc .vimrc
+for file in .bash_logout .bash_profile .bashrc .dotfiles_path .inputrc .profile .rc .screenrc .tmux.conf .vimrc
 do
 	ln -is "$REPODIR/$file" "$HOME/$file"
 done
