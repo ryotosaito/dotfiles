@@ -1,6 +1,7 @@
 export EDITOR="vim"
 export GOPATH="$HOME/go"
 export NVM_DIR="$HOME/.nvm"
+export GPG_TTY=$(tty)
 
 ##############################################
 # PATH
