@@ -14,7 +14,6 @@ case "$(uname -s)" in
 		alias pbp='pbpaste'
 		alias pbc='pbcopy'
 		alias o='open'
-		alias ip='ifconfig #'
 		;;
 	'Linux' )
 		alias pbp='xsel -b'
