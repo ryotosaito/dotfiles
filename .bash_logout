@@ -10,3 +10,7 @@ git status -s | grep '^.M' &>/dev/null && {
 	git commit -m "update on $(date +'%Y/%m/%d %H:%M:%S')"
 	git push
 }
+
+if [ "$SHLVL" = 1 ]; then
+    [ -x /usr/bin/clear_console ] && /usr/bin/clear_console -q
+fi

@@ -41,6 +41,8 @@ shift $(($OPTIND - 1))
 	mkdir -p "$HOME/.vim/bundle/"
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	vim +PluginInstall +qall
+	git config --global user.name "Ryoto Saito"
+	git config --global user.email ryoto.no.address@gmail.com
 }
 
 REPODIR="$(cd $(dirname $0); pwd)"
