@@ -9,6 +9,8 @@ alias egrep='egrep --color=auto'
 
 alias relogin='exec $SHELL -l'
 
+alias k='kubectl'
+
 case "$(uname -s)" in
 	'Darwin' )
 		alias pbp='pbpaste'
@@ -22,5 +24,7 @@ case "$(uname -s)" in
 		;;
 esac
 
-eval "$(hub alias -s)"
-eval "$(direnv hook bash)"
+command -v hub >/dev/null && eval "$(hub alias -s)"
+command -v direnv >/dev/null && eval "$(direnv hook bash)"
+
+command -v rsync >/dev/null && scp () { echo "Use rsync instead." >&2; }
