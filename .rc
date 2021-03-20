@@ -27,4 +27,4 @@ esac
 command -v hub >/dev/null && eval "$(hub alias -s)"
 command -v direnv >/dev/null && eval "$(direnv hook bash)"
 
-command -v rsync >/dev/null && scp () { echo "Use rsync instead." >&2; }
+command -v rsync >/dev/null && scp () { echo "Use rsync instead." >&2; return 1; }
