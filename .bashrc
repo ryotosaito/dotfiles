@@ -39,7 +39,7 @@ __prompt_command() {
 	else
 		PS1+="💥 \[$fred\]$status(${err_code[$status]})\[$reset\]"
 	fi
-	PS1+='\n[\!:\#] (´-\`).oO(\$ '
+	PS1+='\n(´-\`).oO(\$ '
 
 	# From activate script of python3-venv
 	if [ "`basename \"$VIRTUAL_ENV\"`" = "__" ] ; then
