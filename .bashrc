@@ -68,6 +68,7 @@ __prompt_command() {
 ##############################################
 # iTerm2
 ##############################################
-[[ -e "$HOME/.iterm2_shell_integration.bash" ]] && {
+if [[ -e "$HOME/.iterm2_shell_integration.bash" ]]
+then 
 	source "$HOME/.iterm2_shell_integration.bash"
-}
+fi
