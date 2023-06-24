@@ -27,6 +27,12 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 }
 
 ##############################################
+# NVM for Linux
+##############################################
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+##############################################
 # Bash completion for Linux
 ##############################################
 if ! shopt -oq posix; then
