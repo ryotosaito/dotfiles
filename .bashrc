@@ -11,6 +11,10 @@ HISTSIZE=3000
 HISTFILESIZE=3000
 PROMPT_DIRTRIM=3
 
+if [[ -e /usr/lib/git-core/git-sh-prompt ]]; then
+	. /usr/lib/git-core/git-sh-prompt
+fi
+
 ##############################################
 # Prompt
 ##############################################
