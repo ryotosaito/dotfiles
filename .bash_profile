@@ -45,4 +45,4 @@ if ! shopt -oq posix; then
 	fi
 fi
 
-export PATH="$HOME/.cargo/bin:$PATH"
+. "$HOME/.cargo/env"

@@ -3,8 +3,7 @@ export GOPATH="$HOME/go"
 export NVM_DIR="$HOME/.nvm"
 export GPG_TTY=$(tty)
 
-[[ -d "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
-
+[[ -d "$HOME/.cargo/env" ]] && 
 ##############################################
 # PATH
 ##############################################
@@ -29,3 +28,4 @@ PATH="$HOME/.cargo/bin:$PATH"
 }
 
 export PATH
+. "$HOME/.cargo/env"
