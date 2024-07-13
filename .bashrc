@@ -33,7 +33,8 @@ __prompt_command() {
 		[153]=SIGVTALRM [154]=SIGPROF [155]=SIGWINCH [156]=SIGINFO [157]=SIGUSR1
 		[158]=SIGUSR2
 	)
-	PS1="\[$fgreen\]\u@\h\[$reset\]:\[$fblue\]\w\[$reset\] "
+	PS1="\[\e]0;\u@\h:\w\a\]"
+	PS1+="\[$fgreen\]\u@\h\[$reset\]:\[$fblue\]\w\[$reset\] "
 	command -v __git_ps1 &>/dev/null \
 		&& PS1+="$(__git_ps1 "\[$fblack$bgreen\] git@%s \[$reset\]") "
 	PS1+="\[$uline\]\D{%Y/%m/%d %H:%M:%S}\[$reset\] "
