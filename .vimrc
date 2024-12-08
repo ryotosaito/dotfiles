@@ -83,3 +83,4 @@ syntax on
 autocmd BufNewFile,BufRead *.py set expandtab
 set encoding=utf-8
 set fileencodings=utf-8
+autocmd FileType yaml,yaml.ansible setlocal indentkeys-=0#
